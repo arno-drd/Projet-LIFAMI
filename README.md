@@ -4,9 +4,11 @@
 
 ### But du projet
 
-Je suis un étudiant qui aime beaucoup jouer au tennis et qui en fait depuis tout petit, alors avec les thèmes présentés dans l'UE, c'était logique pour moi de faire un jeu de tennis.  
-Mais si c'était seulement un jeu de tennis, une balle qui rebondit et deux raquettes ,ca aurait été un peu simple.
+Je suis un étudiant qui aime beaucoup jouer au tennis et qui en pratique depuis tout petit, alors avec les thèmes présentés dans l'UE, c'était logique pour moi de programmer un jeu de tennis.  
+Mais seulement un jeu de tennis, une balle qui rebondit et deux raquettes, ça aurait été un peu simple.
 J'ai donc réfléchit à tout ce que je pouvais ajouter, pour rendre le jeu plus réaliste et plus amusant.
+
+Le jeu est vu de coté.
 
 ### Contenu
 
@@ -25,7 +27,11 @@ Plusieures choses changent lorsque la difficulté augmente:
 * La friction de la balle avec le sol augmente 
 * La longueur des raquettes diminue  
 * Les coups spéciaux (dont je parlerai après) ont plus d'impact sur la balle
-* Et évidemment le fond change de couleur selon la difficulté
+* Et évidemment le fond change de couleur selon la difficulté  
+
+Je tiens quand même à préciser que ces "niveaux" ne sont pas représentatif de la difficulté des terrains dans la vraie vie. La terre battue, le gazon et le "dur" (c'est techniquement de l'asphalte) représentent chacun une difficulté, et souvent les joueurs ont leur préférence quant à ces surfaces. Exemple: [Rafael Nadal](https://fr.wikipedia.org/wiki/Rafael_Nadal) est meilleur sur terre battue (rolland garos), [Roger Federer](https://fr.wikipedia.org/wiki/Roger_Federer) est meilleur gazon (wimbledon) et [Novak Djokovic](https://fr.wikipedia.org/wiki/Novak_Djokovic) est polyvalent mais meilleur sur du dur (open d'australie). Ces 3 joueurs représentent le top 3 mondial du tennis en score ATP.
+
+Bref, revenons à notre jeu en C/C++ Grapic.
 
 #### Engagement:
 L'engagement (service) a lieu au centre du terrain, du côté du joueur qui a perdu le point précédent.  
