@@ -119,6 +119,50 @@ Il faudra ensuite appuyer sur ESPACE pour relancer la partie.
 
 #### Fin de partie
 
-Cet évenement a lieu lorsque le programme est ammené à ajouter un point à un joueur qui a déjà 5 Jeux, et 40 Points. C'est ainsi que le programme s'arrête sur un écran de victoire.
+Cet évenement a lieu lorsque le programme est ammené à ajouter un point à un joueur qui a déjà 5 Jeux, et 40 Points. C'est ainsi que le programme s'arrête sur un écran de victoire.  
+![Deux victoires possibles](WinGame.png "Les deux victoires possibles")
 
+## Evolution de mon programme:
 
+### Premiere semaine **V1.0**
+Implantation des bases du programme:
+* les structures de données 
+* les premières procédures 
+* l'initialisation (balle au centre, raquettes à la bonne place, ...)
+*  le draw
+*  pas encore d'update  
+
+### Duexieme semaine **V2.0**
+Implantation du update et de tout ce qui va avec:
+* physique sur la balle
+* mouvement des raquettes
+* collision sur les bordures et sur les raquettes  
+Correction de quelques bugs, et de certaines erreurs:
+* un int à la place d'un float dans les premières procédures
+* oubli d'un signe négatif dans une équation
+* quelques == à la place de = dans des if  
+Début du système de difficulté progréssive  
+Implantation des coups spéciaux  
+montée à la vollée (? je ne sais plus si c'était s2 ou s3, aie)
+
+### Troisième semaine **V3.0**
+Implantation du LOB parmi les coups spéciaux
+Système de reset du jeu à la fin de chaque point (avant ca les points s'enchainaient sans pause)  
+Correction de quelques bugs: 
+* score qui ne fonctionnait pas comme il fallait
+* changements de couleurs qui fonctionnait une fois sur deux 
+* coups spéciaux qui marchaient pas comme je le voulais  
+* raquettes qui sort de la fenêtre (pas de colision entre raquette/bordure)
+Service du coté de celui qui a perdu  
+difficulté sur la lune  
+
+### Quatrième semaine + week end **V4.0 et V4.5**
+Corrections de quelques bugs :
+* coups spéciaux qui ne fonctionnaient (toujours pas) comme je le voulais
+* écran de victoire (et fin du jeu au bout d'un moment)
+* nombre de points qui ne revenaient pas à 0 en fin de jeu
+La collision en haut de la fenetre ne servait à rien en difficulté inferieure ou égale à 3, reglé
+Affichage de fin de jeu (quand un joueur marque un point) un peu moche, reglé
+décompte du nombre d'échanges, et meilleur score d'échanges
+Un peu d'optimisation dans l'écriture de programme (-80 lignes de codes, pour un meilleur résultat final)
+Ajout de fonctions de débuguage
