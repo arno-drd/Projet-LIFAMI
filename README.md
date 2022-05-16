@@ -17,8 +17,15 @@ Plusieurs niveaux de difficulté, inspirés des vraies [surfaces de terrain util
 * le gazon
 * l'asphalte  
 
+![Les surfaces](Surfaces.png "Les différentes surfaces sur de vrais terrains")
+
 Pour le fun, il y a aussi un niveau sur la lune.  
-Plusieures choses changent selon la difficulté:
+Plusieures choses changent lorsque la difficulté augmente:
+* La force initiale de la balle est plus élevée
+* La friction de la balle avec le sol augmente 
+* La longueur des raquettes diminue  
+* Les coups spéciaux (dont je parlerai après) ont plus d'impact sur la balle
+* Et évidemment le fond change de couleur selon la difficulté
 
 #### Engagement:
 L'engagement (service) a lieu au centre du terrain, du côté du joueur qui a perdu le point précédent.  
@@ -54,6 +61,9 @@ Aussi, on supposera que la balle n'a que très peu de friction avec le sol, pour
 Pour finir, à chaque contact avec les raquettes, on ajoute un vecteur **vertical** positif à l'acceleration de la balle, cela permet à la balle de conserver une trajectoire réaliste (pour un jeu de tennis).  
 J'en convient, toutes ces légères modifications rendent le jeu moins réaliste dans son aspect physique. A l'inverse, ces modifications rendent le jeu plus réaliste dans son aspect tennistique, et c'est ce qui m'intéressait pour de ce projet.
 
-Pour les equations de l'acceleration, de la vitesse, ainsi que de la position **en fonction du temps**, j'ai utilisé celles qui nous étaient proposées dans le cours de LIFAMI ![(celles-ci)](./Sans titre 2.png "Les equations de force"). 
+Pour les equations de l'acceleration, de la vitesse, ainsi que de la position **en fonction du temps**, j'ai utilisé celles qui nous étaient proposées dans le cours de LIFAMI  
+![Les equations de force](Equations.png "Les equations de force"). 
 
-
+#### Commandes
+Les commandes sont plutôt simples, et son expliquées dans le programme, mais un petit schéma réalisé à la main ne fera pas de mal:  
+![schéma des commandes du jeu](Commandes.jpg "Commandes")
