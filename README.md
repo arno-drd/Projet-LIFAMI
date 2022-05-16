@@ -100,4 +100,25 @@ Pour le premier point, c'est le joueur à droite qui devra frapper la  balle en 
 
 Lors du tout premier coup, le vecteur acceleration de la balle prendra une nouvelle valeur dans sa coordonée x.  
 Sinon, le programme applique la seconde loi de newton sur la balle, pour mettre à jour la position de la balle. Il fait en sorte que la balle rebondisse au sol (càd la valeur y=0) et que la balle rebondisse dans chaque raquettes.  
-Lorsque la balle est proche de la raquette d'un joueur, et que c'est à son tour de frapper, le programme vérifie si le joueur appuie sur un des boutons associés aux "coups spéciaux" mentionnés précédemment. Si c'est le cas, la balle empruntera une trajectoire différente selon le coup spécial, et la valeur de la jauge de ce coup spécial augmentera. Si cette dite jauge atteint son MAX, le joueur ne pourra plus utiliser le coup spécial. 
+Si le joueur à droite vient de taper, on associera à la balle une force vers la gauche, et inversement.  
+Lorsque la balle est proche de la raquette d'un joueur, et que c'est à son tour de frapper, le programme vérifie si le joueur appuie sur un des boutons associés aux "coups spéciaux" mentionnés précédemment. Si c'est le cas, la balle empruntera une trajectoire différente selon le coup spécial, et la valeur de la jauge de ce coup spécial augmentera tant que le joueur reste appuyé sur le bouton. Si cette dite jauge atteint son MAX, le joueur ne pourra plus utiliser le coup spécial.  
+
+A chaque frame, le programme vérifie si la position horizontale (en x) de la balle est: 
+* inferieure à la limite du terrain, cela signifie que le Joueur1 a raté la balle. Le Joueur2 gagne un point, on commence un nouveau point, et tout est remis à zéro, sauf le score.
+* supérieure à la limite du terrain, cela signifie que le Joueur2 a raté la balle. Le Joueur1 gagne un point, on commence un nouveau point, et tout est remis à zéro, sauf le score.
+* égale à celle du filet, cela signifie que la balle est au niveau du filet, si c'est vrai ET que la position verticale de la balle est inferieure au plus haut point du filet, alors le dernier joueur qui a frappé a envoyé la balle dans le filet. L'autre joueur gagne un point, on commence un nouveau point, et tout est remis à zéro, sauf le score.
+
+#### Remise à zéro
+
+Cet évenement a lieu lorsqu'un des joueurs gagne un point, c'est à dire si l'autre joueur a raté la balle, ou si il l'a envoyée dans le filet.  
+Alors, la force horizontale appliquée à la balle au premier coup, sera:
+* négative si le joueur à droite a gagné
+* positive si le joueur à gauche a gagné  
+Lors de cette étape, le programme remet toutes les valeures comme à l'initialisation, sauf le score que l'on gardera jusqu'à la fin de la partie.  
+Il faudra ensuite appuyer sur ESPACE pour relancer la partie.
+
+#### Fin de partie
+
+Cet évenement a lieu lorsque le programme est ammené à ajouter un point à un joueur qui a déjà 5 Jeux, et 40 Points. C'est ainsi que le programme s'arrête sur un écran de victoire.
+
+
